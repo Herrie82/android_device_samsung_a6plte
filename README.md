@@ -16,7 +16,7 @@ Battery | Non-removable Li-Ion 3500 mAh
 Dimensions | 160.1 x 75.7 x 7.9 mm
 Display | 1080 x 2220 pixels, 6.0"
 Rear Camera  | 16 MP, f/1.7, 26mm, phase detection autofocus, LED flash
-             | 5 MP, f/1.9, depth sensor
+Aux Camera   | 5 MP, f/1.9, depth sensor
 Front Camera | 24 MP, f/1,9, 27mm, LED flash
 Release Date | May 2018
 
