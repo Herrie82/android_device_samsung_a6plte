@@ -28,6 +28,22 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/samsung/a6plte/device.mk)
 
+# Overlay
+PRODUCT_PACKAGE_OVERLAYS += \
+	$(LOCAL_PATH)/overlay-lineage
+
+# Trust HAL
+PRODUCT_PACKAGES += \
+	vendor.lineage.trust@1.0-service
+
+# Touch
+PRODUCT_PACKAGES += \
+    vendor.lineage.touch@1.0-service.samsung
+
+# LiveDisplay
+PRODUCT_PACKAGES += \
+	vendor.lineage.livedisplay@2.0-service.samsung-qcom
+
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_a6plte
 PRODUCT_DEVICE := a6plte

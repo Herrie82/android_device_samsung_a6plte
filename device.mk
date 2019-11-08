@@ -16,8 +16,7 @@
 
 # Overlay
 PRODUCT_PACKAGE_OVERLAYS += \
-	$(LOCAL_PATH)/overlay \
-	$(LOCAL_PATH)/overlay-lineage
+	$(LOCAL_PATH)/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := \
 	framework-res
@@ -186,10 +185,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	android.hardware.light@2.0-service.samsung-qcom
 
-# LiveDisplay
-PRODUCT_PACKAGES += \
-	vendor.lineage.livedisplay@2.0-service.samsung-qcom
-
 # Media
 PRODUCT_COPY_FILES += \
 	frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
@@ -329,10 +324,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-# Trust HAL
-PRODUCT_PACKAGES += \
-	vendor.lineage.trust@1.0-service
-
 # USB
 PRODUCT_PACKAGES += \
 	android.hardware.usb@1.0-service.basic
@@ -367,10 +358,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	com.android.media.remotedisplay \
 	com.android.media.remotedisplay.xml
-
-# Touch
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.samsung
 
 # RIL
 PRODUCT_PACKAGES += \
