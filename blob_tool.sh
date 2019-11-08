@@ -133,7 +133,7 @@ pull() {
         local -A written=()
         local N=${1#-}
         N=${N%:*}
-        if [[ "${x:0:1}" = "-" ]]
+        if [[ "${1:0:1}" = "-" ]]
         then
             prefix_map[$N]=-
         fi
