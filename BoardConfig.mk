@@ -174,11 +174,6 @@ BOARD_PROVIDES_LIBRIL := true
 #ENABLE_VENDOR_RIL_SERVICE := true
 #TARGET_USES_OLD_MNC_FORMAT := true
 
-# Shims
-TARGET_LD_SHIM_LIBS := \
-	/vendor/lib/libsec-ril.so|libshim_secril.so \
-	/vendor/lib/libsec-ril-dsds.so|libshim_secril.so
-
 # Security patch level
 VENDOR_SECURITY_PATCH := 2019-06-05
 
