@@ -131,18 +131,17 @@ PRODUCT_PACKAGES += \
 	android.hardware.drm@1.1-service.clearkey
 
 # Gatekeeper
-#PRODUCT_PACKAGES += \
-	#gatekeeperd_sucksung \
-	#android.hardware.gatekeeper@1.0-service-dummy \
-	#android.hardware.gatekeeper@1.0-impl-dummy
+PRODUCT_PACKAGES += \
+	android.hardware.gatekeeper@1.0-service \
+	android.hardware.gatekeeper@1.0-impl
 
 # Settings
 PRODUCT_PACKAGES += \
 	DeviceSettings
 
 # Fingerprint sensor
-#PRODUCT_PACKAGES += \
-#   android.hardware.biometrics.fingerprint@2.1-service.samsung
+PRODUCT_PACKAGES += \
+	android.hardware.biometrics.fingerprint@2.1-service.samsung
 
 # FM KEEP
 PRODUCT_PACKAGES += \
@@ -214,7 +213,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/nfc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf \
 	$(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
 
-	# OMX FIXME
+	# OMX
 PRODUCT_PACKAGES += \
 	libc2dcolorconvert \
 	libstagefrighthw \
@@ -276,7 +275,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/qti/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
 	$(LOCAL_PATH)/configs/qti/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
-
 
 # Init
 PRODUCT_PACKAGES += \

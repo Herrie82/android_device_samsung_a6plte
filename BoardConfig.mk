@@ -133,7 +133,7 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_ROOT_EXTRA_FOLDERS   := dsp efs firmware firmware-modem persist
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/dsp:/dsp \
-    /vendor/firmware_mnt:/firmware \
+    /vendor/firmware_mnt/image:/firmware \
     /mnt/vendor/persist:/persist
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432

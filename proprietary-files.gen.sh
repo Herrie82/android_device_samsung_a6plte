@@ -34,7 +34,6 @@ ignore netmgr_config.xml
 ignore dsi_config.xml
 ignore pa_config
 ignore diag_uart_log
-ignore qseecomd
 
 #ignore libgps.utils.so
 #ignore libloc_core.so
@@ -80,7 +79,7 @@ ignore libnfnetlink.so
 ignore libnetfilter_conntrack.so
 ignore libkeystore-wifi-hidl.so
 ignore libkeystore-engine-wifi-hidl.so
-ignore libkeymaster3device.so
+#ignore libkeymaster3device.so
 ignore libipanat.so
 
 ignore android.hardware.audio@2.0-service
@@ -161,6 +160,12 @@ pull GPU \
     librs_adreno.so \
     librs_adreno_sha1.so
 
+pull Security \
+    qseecomd \
+    libQSEEComAPI.so \
+    gatekeeper.msm8953.so \
+    keystore.msm8953.so
+
 pull Display \
     -libsdm-disp-vndapis.so \
     libsdmextension.so
@@ -231,8 +236,8 @@ pull FM \
     init.qti.fm.rc \
     vendor.qti.hardware.fm@1.0-impl.so
 
-#pull Fingerprint \
-    #libbauthserver.so
+pull Fingerprint \
+    libbauthserver.so
 
 {
     gen-proprietary-files

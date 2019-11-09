@@ -159,10 +159,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/persistent
 
-# Keymaster
-PRODUCT_PROPERTY_OVERRIDES += \
-	ro.hardware.keystore=softwareonly
-
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so

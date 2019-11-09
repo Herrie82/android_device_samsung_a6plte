@@ -71,9 +71,8 @@ on fs
 
 
 on post-fs
-#    start vendor.qseecomd
-#    exec - system system -- /vendor/bin/init.qti.qseecomd.sh
-#    write /dev/ipa 1
+    start vendor.qseecomd
+    write /dev/ipa 1
     chown input system /sys/class/sec/tsp/cmd
     chown input system /sys/class/sec/tsp/cmd_list
     chown input system /sys/class/sec/tsp/input/enabled
@@ -132,6 +131,8 @@ on post-fs-data
     mkdir /persist/data/tz 0700 system system
     mkdir /data/misc/dts 0770 media audio
     mkdir /data/vendor/hbtp 0750 system system
+    mkdir /data/vendor/gatekeeper 0770 system system
+    mkdir /data/vendor/biometrics 0770 system system
 
 # Permissions for NXP AMP calibration
     chown system audio /sys/class/nxp/tfa_cal/status
@@ -245,10 +246,10 @@ on property:persist.usb.chgdisabled=1
 on property:persist.usb.chgdisabled=0
     write /sys/class/power_supply/battery/charging_enabled 1
 
-#service vendor.qseecomd /vendor/bin/qseecomd
-#   class core
-#   user root
-#   group root
+service vendor.qseecomd /vendor/bin/qseecomd
+   class core
+   user root
+   group root
 
 service thermal-engine /system/vendor/bin/thermal-engine
    class main
@@ -375,6 +376,9 @@ on property:init.svc.vendor.per_mgr=running
 on property:sys.shutdown.requested=*
     stop vendor.per_proxy
     stop vendor.ims_rtp_daemon
+
+on property:vendor.sys.listeners.registered=*
+    setprop sys.listeners.registered ${vendor.sys.listeners.registered}
 
 on boot
     write /sys/devices/soc.0/78b8000.i2c/i2c-4/4-0020/input/input0/fw_name PR1702898-s3528t_00260005_00380008.img
