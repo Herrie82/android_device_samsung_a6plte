@@ -241,6 +241,7 @@
          it causes the device to wake up.
          The default is false. -->
     <bool name="config_lidControlsSleep">true</bool>
+    <bool name="config_lidControlsScreenLock">true</bool>
 
     <!-- When true use the linux /dev/input/event subsystem to detect the switch changes
         on the headphone/microphone jack. When false use the older uevent framework. -->
@@ -287,13 +288,7 @@
     <!-- Flag specifying whether VoLTE should be available for carrier: independent of
          carrier provisioning. If false: hard disabled. If true: then depends on carrier
          provisioning, availability etc -->
-<!-- TODO  -->
-    <bool name="config_carrier_volte_available">true</bool>
-    <!-- ImsService package name to bind to by default, if config_dynamic_bind_ims is true -->
-<!-- TODO  -->
-    <string name="config_ims_package">org.codeaurora.ims</string>
-    <!-- Flag specifying whether or not IMS will use the ImsResolver dynamically -->
-    <bool name="config_dynamic_bind_ims">false</bool>
+    <bool name="config_carrier_volte_available">false</bool>
 
     <!-- ComponentName of a dream to show whenever the system would otherwise have
          gone to sleep.  When the PowerManager is asked to go to sleep, it will instead
