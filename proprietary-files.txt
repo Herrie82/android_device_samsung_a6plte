@@ -18,6 +18,14 @@ vendor/bin/thermal-engine
 vendor/etc/thermal-engine.conf
 vendor/lib/libthermalioctl.so
 
+# RIL Time
+vendor/bin/hw/rild
+vendor/lib/libril.so
+vendor/lib/librilutils.so
+vendor/lib/vendor.samsung.hardware.radio@1.2_vendor.so
+vendor/lib/vendor.samsung.hardware.radio.secbridge@1.0_vendor.so
+vendor/lib/vendor.samsung.hardware.radio.sechook@1.0_vendor.so
+
 # DSP
 vendor/bin/adsprpcd
 vendor/lib/libadsp_default_listener.so
@@ -43,15 +51,12 @@ vendor/lib/libqdi.so
 vendor/lib/libqmi_client_helper.so
 vendor/lib/libqrtr.so
 vendor/lib/libqsocket.so
--vendor/lib/libril.so
+vendor/lib/librmnetctl.so
 vendor/lib/libsec-ril-dsds.so
 vendor/lib/libsec-ril.so
 vendor/lib/libxml.so
-vendor/lib/vendor.samsung.hardware.radio@1.2_vendor.so
 vendor/lib/vendor.samsung.hardware.radio.channel@1.0_vendor.so
 vendor/lib/vendor.samsung.hardware.radio.configsvc@1.0_vendor.so
-vendor/lib/vendor.samsung.hardware.radio.secbridge@1.0_vendor.so
-vendor/lib/vendor.samsung.hardware.radio.sechook@1.0_vendor.so
 
 # RIL Security Time
 vendor/lib/libtime_genoff.so
@@ -70,9 +75,6 @@ vendor/lib/libfloatingfeature.so
 
 # PeripheralManager RIL
 vendor/lib/libqmi_csi.so
-
-# Camera FM
-vendor/lib/android.hidl.base@1.0.so
 
 # Camera
 vendor/bin/icd
@@ -102,8 +104,7 @@ vendor/etc/media_profiles_8953_v1.xml
 vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_vendor.xml
 vendor/etc/media_profiles.xml
-vendor/lib/hw/camera.msm8953.so
-vendor/lib/hw/gralloc.msm8953.so
+-vendor/lib/hw/camera.msm8953.so
 vendor/lib/libactuator_zc535.so
 vendor/lib/libC2D2.so
 vendor/lib/libc2d30_bltlib.so
@@ -212,7 +213,6 @@ vendor/lib/libchromatix_sr556_zsl_video_3a.so
 vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
 vendor/lib/libflash_pmic.so
-vendor/lib/libgrallocutils.so
 vendor/lib/libhifills_interface.so
 vendor/lib/libhifills.so
 vendor/lib/libjpegdhw.so
@@ -391,7 +391,7 @@ vendor/firmware/nfc/sec_s3nrn81_firmware.bin
 vendor/lib/libhdr_tm.so
 vendor/lib/libscalar.so
 vendor/lib/libsdm-color.so
--vendor/lib/libsdm-disp-vndapis.so
+vendor/lib/libsdm-disp-vndapis.so
 vendor/lib/libsdmextension.so
 vendor/lib/libtinyxml2_1.so
 
@@ -427,10 +427,6 @@ vendor/lib/libyasalgo.so
 vendor/bin/fm_qsoc_patches
 vendor/bin/init.qti.fm.sh
 vendor/etc/init/init.qti.fm.rc
-vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so
-vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so
-vendor/lib/vendor.qti.hardware.fm@1.0.so
-vendor/lib/vendor.samsung.hardware.bluetooth@1.0.so
 
 # Firmware
 vendor/firmware/a225p5_pm4.fw
@@ -569,3 +565,21 @@ vendor/etc/group
 # Wifi
 vendor/bin/cnss-daemon
 vendor/bin/hw/macloader
+
+# 64-Bit libraries
+vendor/lib64/hw/vulkan.msm8953.so
+vendor/lib64/librs_adreno_sha1.so
+vendor/lib64/librs_adreno.so
+vendor/lib64/egl/eglSubDriverAndroid.so
+vendor/lib64/egl/libEGL_adreno.so
+vendor/lib64/egl/libGLESv1_CM_adreno.so
+vendor/lib64/egl/libGLESv2_adreno.so
+vendor/lib64/egl/libq3dtools_adreno.so
+vendor/lib64/egl/libq3dtools_esx.so
+vendor/lib64/egl/libQTapGLES.so
+vendor/lib64/libadreno_utils.so
+vendor/lib64/libCB.so
+vendor/lib64/libgsl.so
+vendor/lib64/libllvm-glnext.so
+vendor/lib64/libllvm-qcom.so
+vendor/lib64/libOpenCL.so

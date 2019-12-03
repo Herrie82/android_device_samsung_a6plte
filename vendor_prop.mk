@@ -155,13 +155,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.disable_skip_validate=1 \
     vendor.display.enable_default_color_mode=1 \
 
-# Factory reset protection FIXME
+# Factory reset protection
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.frp.pst=/dev/block/persistent
+    ro.frp.pst=/dev/block/bootdevice/by-name/config
 
 # Perf
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.vendor.extension_library=libqti-perfd-client.so
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    ro.vendor.extension_library=libqti-perfd-client.so
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \

@@ -92,7 +92,7 @@ PRODUCT_PACKAGES += \
 	#camera.device@3.2-impl \
 	#camera.device@3.3-impl \
 	#camera.device@3.4-impl \
-	#camera.msm8953  \
+	#camera.msm8953
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -132,7 +132,7 @@ PRODUCT_PACKAGES += \
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
-	android.hardware.gatekeeper@1.0-service \
+	android.hardware.gatekeeper@1.0-service_32 \
 	android.hardware.gatekeeper@1.0-impl
 
 # Settings
@@ -141,9 +141,9 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint sensor
 PRODUCT_PACKAGES += \
-	android.hardware.biometrics.fingerprint@2.1-service.samsung
+	android.hardware.biometrics.fingerprint@2.1-service.samsung_32
 
-# FM KEEP
+# FM
 PRODUCT_PACKAGES += \
 	libqcomfm_jni \
 	qcom.fmradio \
@@ -154,13 +154,13 @@ PRODUCT_PACKAGES += \
 	fs_config_files
 
 # GPS
-PRODUCT_PACKAGES += \
-	libgnss \
-	libgnsspps \
+#PRODUCT_PACKAGES += \
+	#libgnss \
+	#libgnsspps \
 
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl-qti \
-    android.hardware.gnss@1.0-service-qti
+#PRODUCT_PACKAGES += \
+    #android.hardware.gnss@1.0-impl-qti \
+    #android.hardware.gnss@1.0-service-qti
 
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/gps/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf
@@ -178,7 +178,7 @@ PRODUCT_PACKAGES += \
 # Keymaster
 PRODUCT_PACKAGES += \
 	android.hardware.keymaster@3.0-impl \
-	android.hardware.keymaster@3.0-service
+	android.hardware.keymaster@3.0-service_32
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -213,7 +213,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/nfc/libnfc-sec-vendor.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-sec-vendor.conf \
 	$(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
 
-	# OMX
+# OMX
 PRODUCT_PACKAGES += \
 	libc2dcolorconvert \
 	libstagefrighthw \
@@ -299,9 +299,9 @@ PRODUCT_PACKAGES += \
 	android.hardware.renderscript@1.0-impl
 
 # Sensors
-#PRODUCT_PACKAGES += \
-	#android.hardware.sensors@1.0-impl \
-	#android.hardware.sensors@1.0-service
+PRODUCT_PACKAGES += \
+	android.hardware.sensors@1.0-impl \
+	android.hardware.sensors@1.0-service
 
 # Thermal
 PRODUCT_PACKAGES += \
@@ -332,6 +332,7 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
+	libcld80211 \
 	android.hardware.wifi@1.0-service \
     wpa_supplicant.conf \
     wpa_supplicant \
@@ -356,10 +357,10 @@ PRODUCT_PACKAGES += \
 	android.hardware.radio.config@1.0 \
 	android.hardware.radio.deprecated@1.0 \
 	android.hardware.radio@1.2 \
-	libshim_secril \
-	librmnetctl \
-	librilutils \
-	rild
+	libshim_secril
+	#librmnetctl \
+	#librilutils \
+	#rild
 
 PRODUCT_PACKAGES += \
 	libbt-vendor \
