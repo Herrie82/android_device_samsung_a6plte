@@ -77,6 +77,8 @@ vendor/lib/libfloatingfeature.so
 vendor/lib/libqmi_csi.so
 
 # Camera
+vendor/lib/hw/gralloc.msm8953.so
+vendor/lib/libgrallocutils.so
 vendor/bin/icd
 vendor/bin/mm-qcamera-app
 vendor/bin/mm-qcamera-daemon

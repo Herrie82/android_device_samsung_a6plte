@@ -91,7 +91,7 @@ BOARD_HAVE_BLUETOOTH_QCOM := true
 #CAMERA_DAEMON_NOT_PRESENT := true
 #TARGET_SUPPORT_HAL1 := true
 BOARD_QTI_CAMERA_32BIT_ONLY := true
-TARGET_USES_QTI_CAMERA_DEVICE := true
+#TARGET_USES_QTI_CAMERA_DEVICE := true
 #TARGET_TS_MAKEUP := true
 #USE_DEVICE_SPECIFIC_CAMERA := true
 #BOARD_USE_SAMSUNG_CAMERAFORMAT_NV21 := true
@@ -146,10 +146,10 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_HAS_LARGE_FILESYSTEM := true
-BOARD_ROOT_EXTRA_FOLDERS   := dsp efs firmware firmware-modem persist
+BOARD_ROOT_EXTRA_FOLDERS   := efs
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/dsp:/dsp \
-    /vendor/firmware_mnt/image:/firmware \
+    /vendor/firmware_mnt:/firmware \
     /mnt/vendor/persist:/persist
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 BOARD_BOOTIMAGE_PARTITION_SIZE := 33554432
