@@ -22,6 +22,19 @@ ifeq ($(BUILD_64BIT),true)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 endif
 
+ifeq ($(BUILD_TWRP),true)
+
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/lineage/config/common.mk)
+
+PRODUCT_PACKAGES += \
+	libxml2
+
+else
+
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o.mk)
@@ -48,17 +61,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	vendor.lineage.livedisplay@2.0-service.samsung-qcom
 
+endif
+
 # Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_a6plte
 PRODUCT_DEVICE := a6plte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A605
 PRODUCT_MANUFACTURER := samsung
-
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-	BUILD_FINGERPRINT=samsung/a6pltexx/a6plte:9/PPR1.180610.011/A605FNXXU4BSH3:user/release-keys \
-	PRIVATE_BUILD_DESC="a6plte-user 9 PPR1.180610.011 A605FNXXU4BSH3 release-keys"
-
-BUILD_FINGERPRINT := samsung/a6pltexx/a6plte:9/PPR1.180610.011/A605FNXXU4BSH3:user/release-keys
