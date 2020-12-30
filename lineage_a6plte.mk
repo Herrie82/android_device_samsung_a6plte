@@ -29,7 +29,7 @@ ifeq ($(BUILD_TWRP),true)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/halium.mk)
 
 # Inherit from our custom product configuration
-$(call inherit-product, vendor/lineage/config/common.mk)
+#$(call inherit-product, vendor/lineage/config/common.mk)
 
 PRODUCT_PACKAGES += \
 	libxml2
