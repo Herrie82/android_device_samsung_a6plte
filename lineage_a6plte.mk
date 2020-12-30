@@ -26,7 +26,7 @@ ifeq ($(BUILD_TWRP),true)
 
 # Inherit from the common Open Source product configuration
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/halium.mk
+$(call inherit-product, $(SRC_TARGET_DIR)/product/halium.mk)
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/lineage/config/common.mk)
