@@ -85,7 +85,6 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-	Snap \
 	android.hardware.camera.provider@2.4-service \
 	android.hardware.camera.provider@2.4-impl
 	#camera.device@1.0-impl \
@@ -105,7 +104,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PACKAGES += \
-	AdvancedDisplay \
 	gralloc.msm8953 \
 	hwcomposer.msm8953 \
 	memtrack.msm8953 \
@@ -135,10 +133,6 @@ PRODUCT_PACKAGES += \
 	android.hardware.gatekeeper@1.0-service_32 \
 	android.hardware.gatekeeper@1.0-impl
 
-# Settings
-PRODUCT_PACKAGES += \
-	DeviceSettings
-
 # Fingerprint sensor
 PRODUCT_PACKAGES += \
 	android.hardware.biometrics.fingerprint@2.1-service.samsung_32
@@ -146,8 +140,7 @@ PRODUCT_PACKAGES += \
 # FM
 PRODUCT_PACKAGES += \
 	libqcomfm_jni \
-	qcom.fmradio \
-	FM2
+	qcom.fmradio 
 
 # For config.fs
 PRODUCT_PACKAGES += \
@@ -201,9 +194,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	android.hardware.nfc@1.1 \
 	com.android.nfc_extras \
-	libnfc \
-	NfcNci \
-	Tag
+	libnfc 
 
 #PRODUCT_PACKAGES += \
 	#android.hardware.nfc@1.0-impl \
@@ -265,10 +256,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
 	android.hardware.power@1.1-service-qti
 
-# QCOM
-PRODUCT_PACKAGES += \
-	QPerformance
-
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/configs/power/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
@@ -308,13 +295,6 @@ PRODUCT_PACKAGES += \
 	thermal.msm8953.so \
 	android.hardware.thermal@1.0-impl \
 	android.hardware.thermal@1.0-service
-
-# Telephony
-PRODUCT_PACKAGES += \
-    qti-telephony-common
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
 
 # USB
 PRODUCT_PACKAGES += \
